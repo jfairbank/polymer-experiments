@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo List</title>
+  <script src="../bower_components/platform/platform.js"></script>
+  <script src="../components/todo-list/js/bundle.js"></script>
+  <link rel="import" href="../components/todo-list/elements/todo-list.html">
+</head>
+<body>
+  <!-- List with an owner name. -->
+  <todo-list owner="Jeremy"></todo-list>
+
+  <br><br>
+
+  <!-- No owner name. Predefined items. -->
+  <todo-list>
+    <todo-list-item>Buy milk</todo-list-item>
+    <todo-list-item completed>Pick up dry cleaning</todo-list-item>
+    <todo-list-item editing>Read new book</todo-list-item>
+  </todo-list>
+</body>
+</html>

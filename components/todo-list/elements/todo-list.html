@@ -1,0 +1,23 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="item.html">
+
+<polymer-element name="todo-list" attributes="owner">
+  <template>
+    <h2>{{displayOwner}} Todo List</h2>
+
+    <template if="{{haveItems}}">
+      <ul>
+        <template repeat="{{item in items}}">
+          <todo-list-item item="{{item}}" on-remove-item="{{removeItem}}"></todo-list-item>
+        </template>
+      </ul>
+    </template>
+
+    <template if="{{!haveItems}}">
+      Nothing to do...
+    </template>
+
+    <br>
+    <button on-click="{{addItem}}">Add Item</button>
+  </template>
+</polymer-element>

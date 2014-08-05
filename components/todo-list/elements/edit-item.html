@@ -1,0 +1,8 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<polymer-element name="todo-list-edit-item" on-keypress="{{keyPress}}" attributes="item">
+  <template>
+    <input type="text" value="{{item.title}}">
+    <button on-click="{{finishEditing}}">Done</button>
+  </template>
+</polymer-element>

@@ -1,0 +1,9 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="remove-item.html">
+
+<polymer-element name="todo-list-item-completed" noscript attributes="item">
+  <template>
+    <span style="text-decoration: line-through;">{{item.title}}</span>
+    <todo-list-remove-item item="{{item}}"></todo-list-remove-item>
+  </template>
+</polymer-element>

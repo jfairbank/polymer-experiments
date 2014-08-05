@@ -1,0 +1,11 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="remove-item.html">
+
+<polymer-element name="todo-list-view-item" attributes="item">
+  <template>
+    <span on-dblclick="{{startEditing}}">{{item.title}}</span>
+    <button on-click="{{startEditing}}">Edit</button>
+    <button on-click="{{completeItem}}">Complete</button>
+    <todo-list-remove-item item="{{item}}"></todo-list-remove-item>
+  </template>
+</polymer-element>

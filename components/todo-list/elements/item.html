@@ -1,0 +1,24 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="item-completed.html">
+<link rel="import" href="view-item.html">
+<link rel="import" href="edit-item.html">
+
+<polymer-element name="todo-list-item" attributes="item completed editing">
+  <template>
+    <li>
+      <template if="{{item.completed}}">
+        <todo-list-item-completed item="{{item}}"></todo-list-item-completed>
+      </template>
+
+      <template if="{{!item.completed}}">
+        <template if="{{item.editing}}">
+          <todo-list-edit-item item="{{item}}"></todo-list-edit-item>
+        </template>
+
+        <template if="{{!item.editing}}">
+          <todo-list-view-item item="{{item}}"></todo-list-view-item>
+        </template>
+      </template>
+    </li>
+  </template>
+</polymer-element>

@@ -1,0 +1,30 @@
+{
+  "name": "polymer-todo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremy Fairbank <elpapapollo@gmail.com>",
+  "license": "ISC",
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "polymer": "global:Polymer"
+  },
+  "devDependencies": {
+    "browserify": ">= 2.3.0 < 5",
+    "browserify-shim": "~3.6.0",
+    "gulp": "~3.8.7",
+    "vinyl-source-stream": "~0.1.1",
+    "gulp-rename": "~1.2.0",
+    "gulp-connect": "~2.0.6"
+  },
+  "dependencies": {
+    "underscore": "~1.6.0"
+  }
+}
